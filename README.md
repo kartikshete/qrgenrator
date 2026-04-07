@@ -16,6 +16,27 @@ QR Gen Studio allows individuals and marketing professionals to rapidly transfor
 - Utilities: `file-saver`, `canvas-confetti`
 - CSS Framework: `Tailwind CSS 4`
 
+## 🏗 Architecture
+The application follows a standard React component-based architecture:
+1. **Frontend Layer**: Built with React and Vite for blazing fast development and optimized production builds. Handles user input and UI state management.
+2. **Rendering Layer**: Utilizes `qrcode.react` to generate high-quality QR codes dynamically on an HTML5 canvas element.
+3. **Utility Layer**: Implements `file-saver` for exporting the generated canvas as an image file directly to the user's local machine, and `canvas-confetti` for micro-interactions.
+
+## 📂 File Structure
+```text
+qr-gen-studio/
+├── public/            # Static assets
+├── src/               # Main source code
+│   ├── components/    # Reusable UI components
+│   ├── App.jsx        # Main application component
+│   └── main.jsx       # React DOM entry point
+├── .env.example       # Example environment variables
+├── index.html         # Application entry HTML
+├── package.json       # Project metadata and dependencies
+├── vite.config.js     # Vite configuration
+└── README.md          # Project documentation
+```
+
 ## 🚀 Getting Started
 
 ```bash
@@ -46,3 +67,5 @@ npm run dev
 
 ## 👨‍💻 Developer
 **Kartik Shete**
+
+<!-- Doc update 6 -->
