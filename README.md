@@ -2,7 +2,7 @@
 A remarkably fast, production-ready utility tool dedicated to generating, stylizing, and downloading crisp QR codes on the fly.
 
 ## 📝 Overview
-**Repository / Deployment Link:** [https://github.com/kartikshete/qrgenrator.git](https://github.com/kartikshete/qrgenrator.git)
+**Repository / Deployment Link:** https://qrgeneratorr8.netlify.app/)
 
 QR Gen Studio allows individuals and marketing professionals to rapidly transform standard text or URLs into scalable QR codes. Developed using Vite and Tailwind CSS v4, the studio emphasizes zero load-time metrics and relies on `qrcode.react` to render flawless canvas images that are instantly downloadable via `file-saver`.
 
