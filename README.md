@@ -20,6 +20,29 @@ QR Gen Studio allows individuals and marketing professionals to rapidly transfor
 
 ## 🏗 Architecture
 The application follows a standard React component-based architecture:
+
+```mermaid
+graph TD
+    User([User]) -- Input Text/URL --> UI[React Dashboard]
+    UI -- Update State --> Generator[qrcode.react Engine]
+    Generator -- Render Canvas --> Canvas[HTML5 Canvas]
+    
+    subgraph Core_Processing [QR Generation Logic]
+    Generator
+    Canvas
+    end
+    
+    UI -- Trigger Download --> FileSaver[File-Saver Utility]
+    Canvas -- Export Blob --> FileSaver
+    FileSaver -- File Download --> User
+    
+    UI -- Celebration --> Confetti[Canvas Confetti]
+    
+    style UI fill:#f0f9ff,stroke:#0ea5e9,stroke-width:2px
+    style Core_Processing fill:#f0fdf4,stroke:#22c55e,stroke-width:2px
+    style Confetti fill:#fff7ed,stroke:#ea580c,stroke-width:2px
+```
+
 1. **Frontend Layer**: Built with React and Vite for blazing fast development and optimized production builds. Handles user input and UI state management.
 2. **Rendering Layer**: Utilizes `qrcode.react` to generate high-quality QR codes dynamically on an HTML5 canvas element.
 3. **Utility Layer**: Implements `file-saver` for exporting the generated canvas as an image file directly to the user's local machine, and `canvas-confetti` for micro-interactions.
